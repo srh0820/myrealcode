@@ -1,0 +1,163 @@
+#event {
+    margin-bottom: 151px;
+    position: relative; // 부모 요소를 relative로 설정하여 가상 선택자의 기준점을 만듭니다.
+    .titleArea{
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -2rem;
+            left: -2rem;
+            right: -2rem;
+            bottom: -2rem;
+            width: 426px;
+            height: 568px;
+            background: #FFEBB7;
+            border-radius: 10px; 
+            z-index: 1; 
+        }
+        h2{
+            font-size: 30px;
+            font-weight: 700;
+            position: relative; // h2를 부모 요소의 기준으로 설정합니다.
+            z-index: 2; // 가상 선택자보다 위에 위치하도록 설정합니다.
+        }
+        p{
+            font-size: 24px;
+            position: relative;
+            z-index: 2;
+        }
+        a{
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
+            background: #000;
+            border-radius: 30px;
+            width: 94px;
+            height: 38px;
+            display: flex;  /* Flexbox 사용 */
+            position: relative;
+            z-index: 2;
+            justify-content: center;    /* 수평 가운데 정렬 */
+            align-items: center;        /* 수직 가운데 정렬 */
+        }
+    }
+  
+    .thumbList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border-radius: 10px;
+        border: #000;
+        z-index: 2;
+        .eventlist {
+            width: 308px;
+            height: 451px;
+            list-style: none;
+            width: 29.85%; /* 리스트 항목이 부모 요소의 너비를 차지하도록 설정 */
+            max-width: 820px; /* 원하는 너비로 조정 */
+            // width: 29.85%; /* 이 부분은 필요에 따라 조절하세요 */
+            box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+            border-radius: 30px;
+            a {
+            text-decoration: none;
+            display: block;
+                img {
+                    width: 100%; /* 부모 요소인 a에 맞게 이미지 너비를 100%로 설정 */
+                    height: 224px; /* 비율 유지 */
+                    object-fit: cover;
+                    border-top-left-radius: 30px; /* 이미지에도 둥근 모서리를 적용합니다 */
+                    border-top-right-radius: 30px;
+                    
+                }
+                .contentTitle{
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+            }
+            .contentText {
+                min-height: 4rem; // 글자가 작아졌을 때 올라가지 않도록 최소 높이로 막아주기
+                font-size: 14px;
+            }
+        }  
+    }
+}
+
+
+
+
+#sns {
+    img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.3s ease, filter 0.3s ease; 
+        position: relative;     /* 상대적인 위치 지정 */
+    }
+
+   .snsImg {  
+        position: relative;
+        width: 100%;
+        height: 100%;
+        &:hover {
+            transform: scale(1.3);
+            filter: none;
+            z-index: 2;   /* 확대된 이미지가 다른 요소 위로 올라가게 함 */
+            & ~ .snsImg::after {  /* 이미지와 같은 레벨에 있는 .snsImg::after에 적용 */
+            transform: scale(1.3);  /* 이미지와 동일한 크기로 확대 */
+            }
+        }
+        
+        &::after {
+            content: "";
+            background: url(../img/instagram2.svg) no-repeat;
+            width: 13px;
+            height: 13px;
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            transition: transform 0.3s ease;   /* 확대되는 애니메이션을 위한 트랜지션 */
+            transform-origin: top right;     /* 우측 상단을 기준으로 확대 */
+            z-index: 1;
+        }
+    }
+  
+    .right {
+        strong {
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
+            background: #000;
+            border-radius: 30px;
+            width: 97px;
+            height: 37px;
+            display: flex;  /* Flexbox 사용 */
+            justify-content: center;    /* 수평 가운데 정렬 */
+            align-items: center;    /* 수직 가운데 정렬 */
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .left {
+        h2 {
+            font-size: 30px;
+            font-weight: 700;
+        }
+        p {
+            font-size: 16px;
+        }
+        > p {
+            font-size: 20px;
+            span {
+                color: #B2A569;
+                font-weight: 500;
+            }
+        }
+    }
+}

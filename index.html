@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>K디지털 스마트웹앱 프로젝트 마리코</title>
+    <!-- seo -->
+    <meta name="description" content="" /> 
+    <meta property="og:locale" content="ko_KR" /> 
+    <meta property="og:site_name" content="" /> 
+    <meta property="og:url" content=""/> 
+    <meta property="og:type" content="website" /> 
+    <meta property="og:title" content="" /> 
+    <meta property="og:description" content="" /> 
+    <meta property="og:image" content="" />
+
+    <!-- 파비콘 바로가기 -->
+    <link rel="shortcut icon" type="image/x-icon" href="" />
+    <link rel="apple-touch-icon" href="" />
+    <link rel="apple-touch-icon-precomposed" href="">
+    <meta name="msapplication-TileImage" content="" size="270x270" />
+
+    <!-- 텍스트 폰트  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- font icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- 초기화  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+  
+    <!-- 그리드 시스템 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ 
+    <!-- 플러그인 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- css  -->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/srh.css">
+
+    <style>
+        /* .popupshow::before{
+            content: "";
+            position: fixed;
+            left: 0; right: 0;
+            top: 0; bottom: 0;
+            background-color: rgba(0, 0, 0, .5);
+        }
+        #popupform{
+            display: none;
+            background-color: white;
+            min-width: 280px;
+            max-width: 600px;
+            width: 50vw;
+            padding: 1rem;
+            box-sizing: border-box;
+            position: absolute;
+            margin: auto;    바깥여백 똑같이, 그래서 가운데로 정렬
+            left: 0; right: 0; top: 3rem; bottom:3rem;
+        }
+        .popupshow #popupform{
+            display: block;
+        }
+        form li p{
+            display: none;
+        }
+        input[type='text']:focus + P{    input 태그인데 타입이 text인 애들만 포커스가 되면 P 태그 나타남
+            display: block;
+        } */
+    </style>
+
+</head>
+<body class="popupshow">
+    <header id="hd" >
+       
+    </header>
+
+    <section id="mainslider">
+       
+    </section>
+
+    <section id="map">
+      
+    </section>
+
+    <section id="event">
+        <div class="event container-1400">
+            <div class="d-flex align-items-strech">
+                <div class="titleArea position-relative d-block p-4">
+                    <h2>Event</h2>
+                    <p>마이리얼트립에서는</br>
+                        발걸음마다 새로운</br>
+                        경주가 펼쳐집니다!</p>
+                    <a href="">자세히보기</a>
+                </div>
+                <ul class="thumbList d-sm-flex d-flex-grow-1 justify-content-between col">
+                    <li class="eventlist bg-white overflow-hidden">
+                        <a href="" class="d-block"><img src="./img/Event1.jpg" alt="" class="d-block img-fluid">
+                            <span class="contentTitle d-block p-4">꽃길한복 x 마이리얼트립</span>
+                        </a>
+                        <a href="" class="d-block ps-4">
+                            <span class="contentText d-block mb-4">
+                            대한민국 문화의 화룡점정 한복!</br>
+                            경주꽃길한복에서 한복 대여시 할인 이벤트 진행중!</br>
+                            우아한 한복을 입고 생생한 경주 여행을  즐겨보세요!</span>
+                            <span class="d-flex justify-content-end">
+                                <i></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="eventlist bg-white overflow-hidden">
+                        <a href="" class="d-block"><img src="./img/Event2.jpg" alt="" class="d-block img-fluid">
+                            <span class="contentTitle d-block p-4">신라한옥호텔 x 마이리얼트립</span>
+                        </a>
+                        <a href="" class="d-block ps-4">
+                            <span class="contentText d-block mb-4">
+                            마이리얼트립에서 숙소 예약시 20%할인!</br>
+                            신라한옥호텔에서의 특별한 숙박으로</br>
+                            경주 여행이 더욱 특별해집니다!</span>
+                            <span class="d-flex justify-content-end">
+                                <i></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="eventlist bg-white overflow-hidden">
+                        <a href="" class="d-block"><img src="./img/Event3.jpg" alt="" class="d-block img-fluid">
+                            <span class="contentTitle d-block p-4">쏘카 x 마이리얼트립</span>
+                        </a>
+                        <a href="" class="d-block ps-4">
+                            <span class="contentText d-block mb-4">
+                            마이리얼트립에서 쏘카 예약시  1만원 쿠폰 증정!</br>
+                            경주의 멋진 풍경을 쏘카와 방방곡곡 탐색하며</br>
+                            편안하고 자유로운 여행을 경험하세요!</span>
+                            <span class="d-flex justify-content-end">
+                                <i></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    <!--    section#event>.container>.row.align-items-strech>.titleArea.flex-grow-1.position-relative+.eventlist.row.justify-content-between>li*3
+            li.rounded-4.overflow-hidden.bg-white>a.d-block>img.d-block.img-fluid
+                                                  div.p-4>h3.mb-3{꽃길한복}+p{대한민국 문화의 화룡점정 한복!}+a>i
+                                                  a-d-block.p-4>strong.d-block.mb-3{꽃길한복}+span.d-block{대한민국 문화의 화룡점정 한복!}+a>i              
+      .container
+              .row
+                    .titleArea.flex-grow-1.position-relative>h2+p+a
+                    .thumbList.d-sm-flex.justify-content-between
+                          li.bg-white.overflow-hidden>a.d-block>img.d-block.img-fluid
+                                                                        a.d-block.p-4>strong.d-block
+                                                                               span.d-block(min-height 줄것)
+                                                                               span.d-flex.justify-content-end>i -> after와 before에 각각 화살표 넣어두기
+    .thumbList{
+       최대너비주기
+    }
+         
+           .titleArea:before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: -2rem;
+            left: -2rem;
+            right: -2rem;
+            bottom: -2rem;
+        }
+        .eventlist{
+            max-width: 820px
+        } 
+       .des4{
+            min-height: 4rem; // 글자가 작아졌을 때 올라가지 않도록 최소 높이로 막아주기
+        } 
+    -->
+    </section>
+
+    <section id="sns">
+        <div class="sns container-1400">
+            <!-- div.textdiv.row.justify-content-between.align-items-end -->
+            <div class="textArea row justify-content-between align-items-end">
+                <!-- div.left.d-flex>i+div>h2+p -->
+                <div class="left col-lg-6">
+                    <div class="icon d-flex align-items-center mb-2"><i><img src="./img/instagram1.svg" alt="인스타그램 아이콘"></i>
+                        <div class="ms-3">
+                            <h2 class="mb-1">#경주어때 #마이리얼경주</h2>
+                            <p class="mb-0">여행자들의 눈으로 본 경주</p>
+                        </div>
+                    </div>
+                    <p>필수 해시태그 <span>#경주어때 #마이리얼경주</span> 와 함께 경주의 멋진 사진을 남겨주시면</br>
+                    추첨을 통해서 10분께 스타벅스 커피 쿠폰을 보내드립니다. </p>
+                </div> 
+                <!-- 중간 글자색 변경 -> span 태그로 class color 바꿔주기 -->
+                <!-- div.right>ul>li.d-flex*2>strong+p -> strong 검색순위 p 보다 높음 -->
+                <!-- div.right>ul>li*2>strong+span -> d-flex 줄 필요 없음 -->
+                <div class="right col-md-6 d-flex justify-content-end">
+                    <ul>
+                        <li class="d-flex align-items-center mb-2">
+                            <strong>선정기준</strong>
+                            <p class="ms-2 mb-0">필수 해시태그 입력 여부<br>
+                                경주의 멋이 들어있는 감각적인 사진</p>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <strong>당첨자발표</strong>
+                            <p class="ms-2 mb-0">매월 첫 주 인스타그램 DM으로 개별 연락</p>
+                        </li>
+                </div>
+            </div>
+    
+            <!-- div.row>div.col-lg-3.col-md-6*8>div>img.img-fluid -->
+            <div class="row d-flex align-items-stretch">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="snsImg d-flex justify-content-center align-items-center">
+                        <img src="./img/sns1.jpg" alt="인스타그램 이미지" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="snsImg d-flex justify-content-center align-items-center">
+                        <img src="./img/sns2.jpg" alt="인스타그램 이미지" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="snsImg d-flex justify-content-center align-items-center">
+                        <img src="./img/sns3.jpg" alt="인스타그램 이미지" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="snsImg d-flex justify-content-center align-items-center">
+                        <img src="./img/sns4.jpg" alt="인스타그램 이미지" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="snsImg d-flex justify-content-center align-items-center"
+                    ><img src="./img/sns5.jpg" alt="인스타그램 이미지" class="img-fluid">
+                </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="snsImg d-flex justify-content-center align-items-center">
+                        <img src="./img/sns6.jpg" alt="인스타그램 이미지" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <div class="snsImg d-flex justify-content-center align-items-center">
+                        <img src="./img/sns7.jpg" alt="인스타그램 이미지" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="snsImg d-flex justify-content-center align-items-center">
+                        <img src="./img/sns8.jpg" alt="인스타그램 이미지" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recommend">
+       
+    </section>
+
+    <div id="popupform">
+        <!-- <form action="데이터 저장할 페이지" name="db명과 같은 이름으로 한다.">
+             <input type="image" src="./img/btn.jpg">  
+            <ul>
+                <li>
+                    <label for="wr_name">성함</label>
+                    <input type="text" name="wr_name" placeholder="한글명만" id="wr_name">
+                    <p>한글이름만 기입해주세요.</p>
+                </li>
+                <li>
+
+                </li>
+                <li></li>
+            </ul>
+            <button type="button">작성하기</button>
+        </form>
+
+        <button>닫기</button> -->
+    </div>
+
+    <footer id="ft">
+
+    </footer>
+
+    <script>
+        document.querySelector("#popupform > button").addEventListener('click', function(){
+            document.body.classList = "";
+        })
+    </script>
+</body>
+</html>
