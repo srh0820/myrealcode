@@ -81,8 +81,26 @@
 
 </head>
 <body class="popupshow">
-    <header id="hd" >
-       
+    <header id="hd">
+        <div class="container-1824 py-3 border-bottom d-flex justify-content-between align-items-center fixed-top bg-white">
+            <h1 class="mb-0"><a href=""><img src="./img/hdLogo.svg" alt=""></a></h1> <!-- 로고는 이미지로 -->
+            <!-- ul#gnb>li*4>a{대메뉴$} -->
+            <ul class="gnb ps-0 mb-0 d-flex">
+                <li class="mx-5 text-nowrap"><a href="">경주 소개</a></li>
+                <li class="mx-5 text-nowrap"><a href="">여행 정보</a></li>
+                <li class="mx-5 text-nowrap"><a href="">예약 및 문의</a></li>
+                <li class="mx-5 text-nowrap"><a href="">이벤트</a></li>
+            </ul>
+            <!-- ul.iconMenu>li*2>i>img^span -->
+            <ul class="iconMenu ps-0 mb-0 d-flex justify-content-end">
+                <li class="ms-4"><i><img src="./img/hdSearch.svg" alt=""></i>
+                    <span class="visually-hidden">검색</span>
+                </li>
+                <li class="ms-4"><i><img src="./img/hdLogin.svg" alt=""></i>
+                    <span class="visually-hidden">로그인</span>
+                </li>
+            </ul>
+        </div>
     </header>
 
     <section id="mainslider">
@@ -96,14 +114,14 @@
     <section id="event">
         <div class="event container-1400">
             <div class="d-flex align-items-strech">
-                <div class="titleArea position-relative d-block p-4">
+                <div class="titleArea position-relative d-block ps-5 pt-4">
                     <h2>Event</h2>
                     <p>마이리얼트립에서는</br>
                         발걸음마다 새로운</br>
                         경주가 펼쳐집니다!</p>
                     <a href="">자세히보기</a>
                 </div>
-                <ul class="thumbList d-sm-flex d-flex-grow-1 justify-content-between col">
+                <ul class="thumbList d-sm-flex d-flex-grow-1 justify-content-between col pt-4 mb-0">
                     <li class="eventlist bg-white overflow-hidden">
                         <a href="" class="d-block"><img src="./img/Event1.jpg" alt="" class="d-block img-fluid">
                             <span class="contentTitle d-block p-4">꽃길한복 x 마이리얼트립</span>
@@ -114,7 +132,10 @@
                             경주꽃길한복에서 한복 대여시 할인 이벤트 진행중!</br>
                             우아한 한복을 입고 생생한 경주 여행을  즐겨보세요!</span>
                             <span class="d-flex justify-content-end">
-                                <i></i>
+                                <i class="arrow my-2 me-4"><svg width="42" height="30" viewBox="0 0 42 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.015625 14.7044C0.015625 14.279 0.173585 13.871 0.454757 13.5702C0.735928 13.2694 1.11728 13.1004 1.51492 13.1004H36.8772L27.4406 3.00743C27.1591 2.70623 27.001 2.29771 27.001 1.87174C27.001 1.44577 27.1591 1.03725 27.4406 0.736045C27.7222 0.43484 28.104 0.265625 28.5021 0.265625C28.9003 0.265625 29.2821 0.43484 29.5636 0.736045L41.558 13.5687C41.6976 13.7178 41.8084 13.8948 41.8839 14.0896C41.9595 14.2845 41.9984 14.4934 41.9984 14.7044C41.9984 14.9154 41.9595 15.1244 41.8839 15.3192C41.8084 15.5141 41.6976 15.6911 41.558 15.8401L29.5636 28.6728C29.2821 28.974 28.9003 29.1433 28.5021 29.1433C28.104 29.1433 27.7222 28.974 27.4406 28.6728C27.1591 28.3716 27.001 27.9631 27.001 27.5371C27.001 27.1112 27.1591 26.7027 27.4406 26.4014L36.8772 16.3085H1.51492C1.11728 16.3085 0.735928 16.1395 0.454757 15.8387C0.173585 15.5379 0.015625 15.1299 0.015625 14.7044Z" fill="#DDD094"/>
+                                    </svg>
+                                </i>
                             </span>
                         </a>
                     </li>
@@ -128,7 +149,10 @@
                             신라한옥호텔에서의 특별한 숙박으로</br>
                             경주 여행이 더욱 특별해집니다!</span>
                             <span class="d-flex justify-content-end">
-                                <i></i>
+                                <i class="arrow my-2 me-4"><svg width="42" height="30" viewBox="0 0 42 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.015625 14.7044C0.015625 14.279 0.173585 13.871 0.454757 13.5702C0.735928 13.2694 1.11728 13.1004 1.51492 13.1004H36.8772L27.4406 3.00743C27.1591 2.70623 27.001 2.29771 27.001 1.87174C27.001 1.44577 27.1591 1.03725 27.4406 0.736045C27.7222 0.43484 28.104 0.265625 28.5021 0.265625C28.9003 0.265625 29.2821 0.43484 29.5636 0.736045L41.558 13.5687C41.6976 13.7178 41.8084 13.8948 41.8839 14.0896C41.9595 14.2845 41.9984 14.4934 41.9984 14.7044C41.9984 14.9154 41.9595 15.1244 41.8839 15.3192C41.8084 15.5141 41.6976 15.6911 41.558 15.8401L29.5636 28.6728C29.2821 28.974 28.9003 29.1433 28.5021 29.1433C28.104 29.1433 27.7222 28.974 27.4406 28.6728C27.1591 28.3716 27.001 27.9631 27.001 27.5371C27.001 27.1112 27.1591 26.7027 27.4406 26.4014L36.8772 16.3085H1.51492C1.11728 16.3085 0.735928 16.1395 0.454757 15.8387C0.173585 15.5379 0.015625 15.1299 0.015625 14.7044Z" fill="#DDD094"/>
+                                    </svg>
+                                </i>
                             </span>
                         </a>
                     </li>
@@ -142,7 +166,10 @@
                             경주의 멋진 풍경을 쏘카와 방방곡곡 탐색하며</br>
                             편안하고 자유로운 여행을 경험하세요!</span>
                             <span class="d-flex justify-content-end">
-                                <i></i>
+                                <i class="arrow my-2 me-4"><svg width="42" height="30" viewBox="0 0 42 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.015625 14.7044C0.015625 14.279 0.173585 13.871 0.454757 13.5702C0.735928 13.2694 1.11728 13.1004 1.51492 13.1004H36.8772L27.4406 3.00743C27.1591 2.70623 27.001 2.29771 27.001 1.87174C27.001 1.44577 27.1591 1.03725 27.4406 0.736045C27.7222 0.43484 28.104 0.265625 28.5021 0.265625C28.9003 0.265625 29.2821 0.43484 29.5636 0.736045L41.558 13.5687C41.6976 13.7178 41.8084 13.8948 41.8839 14.0896C41.9595 14.2845 41.9984 14.4934 41.9984 14.7044C41.9984 14.9154 41.9595 15.1244 41.8839 15.3192C41.8084 15.5141 41.6976 15.6911 41.558 15.8401L29.5636 28.6728C29.2821 28.974 28.9003 29.1433 28.5021 29.1433C28.104 29.1433 27.7222 28.974 27.4406 28.6728C27.1591 28.3716 27.001 27.9631 27.001 27.5371C27.001 27.1112 27.1591 26.7027 27.4406 26.4014L36.8772 16.3085H1.51492C1.11728 16.3085 0.735928 16.1395 0.454757 15.8387C0.173585 15.5379 0.015625 15.1299 0.015625 14.7044Z" fill="#DDD094"/>
+                                    </svg>
+                                </i>
                             </span>
                         </a>
                     </li>

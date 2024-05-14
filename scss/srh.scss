@@ -1,5 +1,17 @@
+#hd{
+    height: 100px;
+    .gnb{
+        
+        a{
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+}
+
 #event {
-    margin-bottom: 151px;
+    margin-top: 150px;
     position: relative; // 부모 요소를 relative로 설정하여 가상 선택자의 기준점을 만듭니다.
     .titleArea{
         &::before {
@@ -7,7 +19,7 @@
             display: block;
             position: absolute;
             top: -2rem;
-            left: -2rem;
+            left: 0;
             right: -2rem;
             bottom: -2rem;
             width: 426px;
@@ -24,6 +36,8 @@
         }
         p{
             font-size: 24px;
+            font-weight: 500;
+            letter-spacing: -1px;
             position: relative;
             z-index: 2;
         }
@@ -61,8 +75,8 @@
             box-shadow: 0 4px 4px rgba(0,0,0,0.25);
             border-radius: 30px;
             a {
-            text-decoration: none;
-            display: block;
+                text-decoration: none;
+                display: block;
                 img {
                     width: 100%; /* 부모 요소인 a에 맞게 이미지 너비를 100%로 설정 */
                     height: 224px; /* 비율 유지 */
@@ -80,14 +94,33 @@
                 min-height: 4rem; // 글자가 작아졌을 때 올라가지 않도록 최소 높이로 막아주기
                 font-size: 14px;
             }
+            .arrow{
+                transition: transform 0.5s ease-in-out;
+                path{
+                    fill: #989797;
+                    transition: fill 0.3s ease-in-out;
+                }
+                &:hover{
+                    transform: translateX(10px);
+                    path{
+                        fill: #DDD094;
+                    }
+                }
+                @keyframes moveRight {
+                    0% {
+                      transform: translateX(-10px);
+                    }
+                    100% {
+                      transform: translateX(10px);
+                    }
+                }
+            }
         }  
     }
 }
 
-
-
-
 #sns {
+    margin-top: 150px;
     img {
         width: 100%;
         height: 100%;
