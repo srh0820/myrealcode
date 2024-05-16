@@ -45,8 +45,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- css  -->
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/srh.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/srh.css">
 
     <style>
         /* .popupshow::before{
@@ -86,10 +86,38 @@
             <h1 class="mb-0"><a href=""><img src="./img/hdLogo.svg" alt=""></a></h1> <!-- 로고는 이미지로 -->
             <!-- ul#gnb>li*4>a{대메뉴$} -->
             <ul class="gnb ps-0 mb-0 d-flex">
-                <li class="mx-5 text-nowrap"><a href="">경주 소개</a></li>
-                <li class="mx-5 text-nowrap"><a href="">여행 정보</a></li>
-                <li class="mx-5 text-nowrap"><a href="">예약 및 문의</a></li>
-                <li class="mx-5 text-nowrap"><a href="">이벤트</a></li>
+                <li class="d1_li mx-5 position-relative">
+                    <a href="">경주 소개</a>
+                    <ul class="d2_ul position-absolute border ps-0">
+                        <li><a href="">역사 및 소개</a></li>
+                        <li><a href="">지역특산품</a></li>
+                    </ul>
+                </li>
+                <li class="d1_li mx-5 position-relative">
+                    <a href="">여행 정보</a>
+                    <ul class="d2_ul position-absolute border ps-0">
+                        <li><a href="">관광지</a></li>
+                        <li><a href="">음식 및 카페</a></li>
+                        <li><a href="">축제</a></li>
+                        <li><a href="">추천코스</a></li>
+                        <li><a href="">여행 후기</a></li>
+                    </ul>
+                </li>
+                <li class="d1_li mx-5 position-relative">
+                    <a href="">예약 및 문의</a>
+                    <ul class="d2_ul position-absolute border ps-0">
+                        <li><a href="">숙소 예약</a></li>
+                        <li><a href="">패키지 여행 예약</a></li>
+                        <li><a href="">문의사항</a></li>
+                        <li><a href="">자주 묻는 문의</a></li>
+                    </ul>
+                </li>
+                <li class="d1_li mx-5 position-relative">
+                    <a href="" >이벤트</a>
+                    <ul class="d2_ul position-absolute border ps-0">
+                        <li><a href="" >진행중인 이벤트</a></li>
+                    </ul>
+                </li>
             </ul>
             <!-- ul.iconMenu>li*2>i>img^span -->
             <ul class="iconMenu ps-0 mb-0 d-flex justify-content-end">
