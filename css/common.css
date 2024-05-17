@@ -13,3 +13,7 @@ body * {
   max-width: 1824px;
   margin: 0 auto;
 }
+
+a {
+  text-decoration: none;
+}
