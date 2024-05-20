@@ -82,20 +82,20 @@
 </head>
 <body class="popupshow">
     <header id="hd">
-        <div class="container-1824 border-bottom py-3 d-flex justify-content-between align-items-center fixed-top bg-white">
+        <div class="container-1824 d-flex justify-content-between align-items-center fixed-top">
             <h1 class="mb-0"><a href=""><img src="./img/hdLogo.svg" alt=""></a></h1> <!-- 로고는 이미지로 -->
             <!-- ul#gnb>li*4>a{대메뉴$} -->
             <ul class="gnb ps-0 mb-0 d-flex">
                 <li class="gnb_li px-5 position-relative">
                     <a href="">경주 소개</a>
-                    <ul class="gnb_li_ul position-absolute ps-0 py-3">
+                    <ul class="gnb_ul position-absolute ps-0">
                         <li><a href="">역사 및 소개</a></li>
                         <li><a href="">지역특산품</a></li>
                     </ul>
                 </li>
                 <li class="gnb_li px-5 position-relative">
                     <a href="">여행 정보</a>
-                    <ul class="gnb_li_ul position-absolute ps-0 py-3">
+                    <ul class="gnb_ul position-absolute ps-0">
                         <li><a href="">관광지</a></li>
                         <li><a href="">음식 및 카페</a></li>
                         <li><a href="">축제</a></li>
@@ -105,7 +105,7 @@
                 </li>
                 <li class="gnb_li px-5 position-relative">
                     <a href="">예약 및 문의</a>
-                    <ul class="gnb_li_ul position-absolute ps-0 py-3">
+                    <ul class="gnb_ul position-absolute ps-0">
                         <li><a href="">숙소 예약</a></li>
                         <li><a href="">패키지 여행 예약</a></li>
                         <li><a href="">문의사항</a></li>
@@ -114,7 +114,7 @@
                 </li>
                 <li class="gnb_li px-5 position-relative">
                     <a href="" >이벤트</a>
-                    <ul class="gnb_li_ul position-absolute ps-0 py-3">
+                    <ul class="gnb_ul position-absolute ps-0">
                         <li><a href="" >진행중인 이벤트</a></li>
                     </ul>
                 </li>
@@ -132,7 +132,77 @@
     </header>
 
     <section id="mainslider">
-
+        <div class="swiper mainSwiper swiper-h">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="mainText">
+                        <p><strong>경주의 계절 축제</strong></p>
+                        <P>경주의 계절</br>
+                            봄날의 벚꽃 축제</P>
+                        <a href="">자세히보기</a>
+                    </div>
+                    <div>
+                        <img src="./img/mainImg1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="mainText">
+                        <p><strong> &lt;꽃길한복&gt; 대여 이벤트</strong></p>
+                        <P>아름다운 한복이 여행을</br>
+                            꽃길로 만들어 줄거에요</P>
+                        <a href="">자세히보기</a>
+                    </div>
+                    <div>
+                        <img src="./img/mainImg2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="mainText">
+                        <p><strong>여행 명소 투어</strong></p>
+                        <P>뚜벅뚜벅, 경주의</br>
+                            역사를 따라 걷는 시간</P>
+                        <a href="">자세히보기</a>
+                    </div>
+                    <div>
+                        <img src="./img/mainImg3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="mainText">
+                        <p><strong>올 여름 어느때보다 시원하게!</strong></p>
+                        <P>무더운 여름, 경주</br>
+                            시원한 카페 TOP 3</P>
+                        <a href="">자세히보기</a>
+                    </div>
+                    <div>
+                        <img src="./img/mainImg4.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="mainText">
+                        <p><strong>우리들의 추억 여행</strong></p>
+                        <P>다시 오지 못 할 지금,</br>
+                            이 순간을 기록하세요</P>
+                        <a href="">자세히보기</a>
+                    </div>
+                    <div>
+                        <img src="./img/mainImg5.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="mainText">
+                        <p><strong>꿈, 사랑, 행복의 경주월드</strong></p>
+                        <P>스트레스 해소</br>
+                            최강 스릴 도전!</P>
+                        <a href="">자세히보기</a>
+                    </div>
+                    <div>
+                        <img src="./img/mainImg6.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
     </section>
 
     <section id="map">
@@ -240,12 +310,12 @@
     </section>
 
     <section id="sns">
-        <div class="sns container-1400">
+        <div class="container-1400">
             <!-- div.textdiv.row.justify-content-between.align-items-end -->
-            <div class="textArea row justify-content-between align-items-end">
+            <div class="row justify-content-between align-items-end">
                 <!-- div.left.d-flex>i+div>h2+p -->
-                <div class="left col-lg-6">
-                    <div class="icon d-flex align-items-center mb-2"><i><img src="./img/instagram1.svg" alt="인스타그램 아이콘"></i>
+                <div class="snsLefttextR col-lg-6">
+                    <div class="d-flex align-items-center mb-2"><i><img src="./img/instagram1.svg" alt="인스타그램 아이콘"></i>
                         <div class="ms-3">
                             <h2 class="mb-1">#경주어때 #마이리얼경주</h2>
                             <p class="mb-0">여행자들의 눈으로 본 경주</p>
@@ -257,7 +327,7 @@
                 <!-- 중간 글자색 변경 -> span 태그로 class color 바꿔주기 -->
                 <!-- div.right>ul>li.d-flex*2>strong+p -> strong 검색순위 p 보다 높음 -->
                 <!-- div.right>ul>li*2>strong+span -> d-flex 줄 필요 없음 -->
-                <div class="right col-md-6 d-flex justify-content-end">
+                <div class="snsRighttextR col-md-6 d-flex justify-content-end">
                     <ul>
                         <li class="d-flex align-items-center mb-2">
                             <strong>선정기준</strong>
@@ -274,42 +344,42 @@
             <!-- div.row>div.col-lg-3.col-md-6*8>div>img.img-fluid -->
             <div class="row d-flex align-items-stretch">
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="snsImg d-flex justify-content-center align-items-center">
+                    <div class="snsImgR d-flex justify-content-center align-items-center">
                         <img src="./img/sns1.jpg" alt="인스타그램 이미지" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="snsImg d-flex justify-content-center align-items-center">
+                    <div class="snsImgR d-flex justify-content-center align-items-center">
                         <img src="./img/sns2.jpg" alt="인스타그램 이미지" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="snsImg d-flex justify-content-center align-items-center">
+                    <div class="snsImgR d-flex justify-content-center align-items-center">
                         <img src="./img/sns3.jpg" alt="인스타그램 이미지" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="snsImg d-flex justify-content-center align-items-center">
+                    <div class="snsImgR d-flex justify-content-center align-items-center">
                         <img src="./img/sns4.jpg" alt="인스타그램 이미지" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                    <div class="snsImg d-flex justify-content-center align-items-center"
+                    <div class="snsImgR d-flex justify-content-center align-items-center"
                     ><img src="./img/sns5.jpg" alt="인스타그램 이미지" class="img-fluid">
                 </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                    <div class="snsImg d-flex justify-content-center align-items-center">
+                    <div class="snsImgR d-flex justify-content-center align-items-center">
                         <img src="./img/sns6.jpg" alt="인스타그램 이미지" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <div class="snsImg d-flex justify-content-center align-items-center">
+                    <div class="snsImgR d-flex justify-content-center align-items-center">
                         <img src="./img/sns7.jpg" alt="인스타그램 이미지" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="snsImg d-flex justify-content-center align-items-center">
+                    <div class="snsImgR d-flex justify-content-center align-items-center">
                         <img src="./img/sns8.jpg" alt="인스타그램 이미지" class="img-fluid">
                     </div>
                 </div>
@@ -451,6 +521,15 @@
         document.querySelector("#popupform > button").addEventListener('click', function(){
             document.body.classList = "";
         })
+
+        var swiper = new Swiper(".mainSwiper", {
+        spaceBetween: 50,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        });
+  </script>
     </script>
 </body>
 </html>
