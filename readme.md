@@ -1,4 +1,4 @@
-# :computer: 독립형 웹 제작 프로젝트
+# :computer: 스마트웹앱(RWA) 제작 프로젝트
 
 ## 주제
 여행 - 마이리얼트립 
@@ -25,8 +25,11 @@
 - bootstrap (그리드)
 - swiper
 
-### :pushpin: 사용기술 및 도구
-- html
-- scss / css
-- java script
+### :pushpin: 사용언어
+- html / scss
+- javascript
+
+### :pushpin: 개발도구(IDE)
 - vscode
+- Figma
+- photoshop
