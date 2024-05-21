@@ -32,5 +32,6 @@
 ### :pushpin: 개발도구(IDE)
 - VScode
 - Figma
-- Adode XD
+- Adobe XD
+- Illustrator
 - Photoshop
