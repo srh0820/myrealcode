@@ -30,6 +30,7 @@
 - javascript
 
 ### :pushpin: 개발도구(IDE)
-- vscode
+- VScode
 - Figma
-- photoshop
+- Adode XD
+- Photoshop
