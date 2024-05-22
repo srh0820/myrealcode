@@ -71,21 +71,25 @@
 
 #main {
     background-color: #f9d6d6;
+    width: 100vw;
     height: 844px;
     position: relative;
     overflow: hidden;
     &::after{
         content: "";
+        display: block;
         position: absolute;
-        background-color: #fff;
-        border-bottom: 1px solid #000;
+        background-color: #ffffff;
+        // border-bottom: 1px solid #000;
+        width: 100%;
         height: 44px;
         left: 0;
-        right: 0;
         bottom: 0;
+        z-index: 1;
     }
     .mainTextbox{
-        .slideText{
+        width: 700px;
+        .mainSlidetext{
             margin-top: 396px;
             margin-left: 260px;
             p {
@@ -106,16 +110,26 @@
                 line-height: 46px;
                 letter-spacing: -6%;
             }
-            a {
-            text-decoration: underline;
-            font-size: 20px;
+            .text-with-underline {
+                // text-decoration: underline;
+                font-size: 18px;
+                margin-bottom: 1px; /* 텍스트와 밑줄 사이의 공간 조정 */
+                &::after {
+                    content: "";
+                    display: block;
+                    height: 1px; 
+                    background-color: #333; 
+                    margin-top: 1px; 
+                    width: 4.8rem;
+                }
             }
         }
     }
     .mainImgbox{
         margin-top: 264px;
-        margin-left: -258px;
-        z-index: 1;
+        margin-right: 206px;
+        height: 580px;
+        z-index: 2;
         img{
             margin-right: 27px;
             border-radius: 10px;
@@ -123,6 +137,88 @@
             height: 580px;
             -o-object-fit: cover;
             object-fit: cover;
+        }
+    }
+    .mainPagebox{
+        position: absolute;
+        margin-left: 260px;
+        z-index: 3;
+        bottom: 0;
+        .Page{
+            width: 374px;
+            height: 44px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            .swiper-progress-bar{
+                position: relative;
+                width: 180px;
+                z-index: 2;
+                height: 2px; 
+                background: #989797;
+                margin-right: 25px;
+                .slide_progress-bar {           
+                    position: absolute;
+                    height: 2px;
+                    background: #989797;
+                    width: auto;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    // opacity: 0;
+                }
+                .fill{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 50px;
+                    background: #000;
+                    z-index: 1;
+                }
+            }
+            .swiper-pagination{
+                width: 44px;
+                height: 44px;
+                position: static;
+                font-size: 15px;
+                font-weight: 400;
+                .swiper-pagination-current2{
+                    color: #989797;
+                }
+            }
+            .btn{
+                position: relative;
+                height: 44px;
+                width: 59px;
+                margin-left: 65px;
+                padding: 0;
+                border: 0;
+                text-align: center;
+                .button-prev{
+                    width: 10px;
+                    height: 10px;
+                    background: url(/img/mainLeft.svg) no-repeat;
+                }
+                .button-next{
+                    width: 10px;
+                    height: 10px;
+                    background: url(/img/mainRight.svg) no-repeat;
+                }
+                .button-stop{
+                    width: 7px;
+                    height: 10px;
+                    background: url(/img/mainStop.svg) no-repeat;
+                }
+            }
+        }
+    }
+    @keyframes fillProgress {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 100%;
         }
     }
 }

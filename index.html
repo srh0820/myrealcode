@@ -132,49 +132,87 @@
     </header>
 
     <section id="main">
-
-        <!-- 태그참조 -->
-        <div class="d-flex flex-wrap w-100">
+        <div class="d-flex flex-wrap">
 
             <div class="mainTextbox col-6 d-flex">
-                <div class="slideText">
+                <div class="mainSlidetext">
                     <p class="mb-3">경주의 계절 축제</p>
                     <strong>
                         경주의 계절<br>
                         봄날의 벚꽃 축제
                     </strong>
-                    <a href="" class="d-block mt-3">자세히 보기</a>
+                    <a href="" class="text-with-underline d-block mt-3">자세히보기</a>
+                </div>
+                <div class="mainSlidetext d-none">
+                    <p class="mb-3"> &lt;꽃길한복&gt; 대여 이벤트</p>
+                    <strong>
+                        아름다운 한복이 여행을<br>
+                        꽃길로 만들어 줄거에요
+                    </strong>
+                    <a href="" class="text-with-underline d-block mt-3">자세히보기</a>
+                </div>
+                <div class="mainSlidetext d-none">
+                    <p class="mb-3">여행 명소 투어</p>
+                    <strong>
+                        뚜벅뚜벅, 경주의<br>
+                        역사를 따라 걷는 시간
+                    </strong>
+                    <a href="" class="text-with-underline d-block mt-3">자세히보기</a>
+                </div>
+                <div class="mainSlidetext d-none">
+                    <p class="mb-3">올 여름 어느때보다 시원하게!</p>
+                    <strong>
+                        무더운 여름, 경주<br>
+                        시원한 카페 TOP 3
+                    </strong>
+                    <a href="" class="text-with-underline d-block mt-3">자세히보기</a>
+                </div>
+                <div class="mainSlidetext d-none">
+                    <p class="mb-3">우리들의 추억 여행</p>
+                    <strong>
+                        다시 오지 못 할 지금,<br>
+                        이 순간을 기록하세요
+                    </strong>
+                    <a href="" class="text-with-underline d-block mt-3">자세히보기</a>
+                </div>
+                <div class="mainSlidetext d-none">
+                    <p class="mb-3">행복의 경주월드</p>
+                    <strong>
+                        스트레스 해소<br>
+                        최강 스릴 도전!
+                    </strong>
+                    <a href="" class="text-with-underline d-block mt-3">자세히보기</a>
                 </div>
             </div>
 
             <div class="mainImgbox col-6 d-flex">
-                <ul class="d-flex px-0">
-                    <li class="slideImg">
+                <ul class="d-flex px-0 mb-0">
+                    <li class="mainSlideimg">
                         <a href="">
                             <img src="/img/mainImg1.jpg" alt="경주의 계절 축제<br>봄날의 벚꽃 축제">
                         </a>
                     </li>
-                    <li class="slideImg">
+                    <li class="mainSlideimg">
                         <a href="">
                             <img src="/img/mainImg2.jpeg" alt="꽃길 한복 대여 이벤트<br>아름다운 한복이 여행을 꽃길로 만들어 줄거에요">
                         </a>
                     </li>
-                    <li class="slideImg">
+                    <li class="mainSlideimg">
                         <a href="">
                             <img src="/img/mainImg3.jpg" alt="여행 명소 투어<br>뚜벅뚜벅, 경주의 역사를 따라 걷는 시간">
                         </a>
                     </li>
-                    <li class="slideImg">
+                    <li class="mainSlideimg">
                         <a href="">
                             <img src="/img/mainImg4.jpg" alt="올 여름 어느때보다 시원하게!<br>경주 시원한 카페 TOP 3">
                         </a>
                     </li>
-                    <li class="slideImg">
+                    <li class="mainSlideimg">
                         <a href="">
                             <img src="/img/mainImg5.jpg" alt="우리들의 추억 여행<br>다시 오지 못 할 지금, 이 순간을 기록하세요">
                         </a>
                     </li>
-                    <li class="slideImg">
+                    <li class="mainSlideimg">
                         <a href="">
                             <img src="/img/mainImg6.jpg" alt="꿈, 사랑, 행복의 경주월드<br>스트레스 해소 최강 스릴 도전!">
                         </a>
@@ -182,30 +220,27 @@
                 </ul>
             </div>
 
-            <div class="mainPagebox d-none">
-                <div class="page">
-                    <div class="swiper-progress-bar">
+            <div class="mainPagebox d-flex">
+                <div class="Page d-flex align-items-center">
+                    <div class="swiper-progress-bar d-flex align-items-center">
                         <span class="slide_progress-bar">
                             <span class="fill"></span>
                         </span>
                     </div>
-                    <div class="swiper-pagination">
-                        <span class="swiper-pagination-current">01</span>
-                        /  
-                        <span class="swiper-pagination-current">12</span>
+                    <div class="swiper-pagination d-flex align-items-center">
+                        <span class="swiper-pagination-current1">01</span>
+                        /
+                        <span class="swiper-pagination-current2">06</span>
                     </div>
-                    <div class="btn">
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                        <div class="btn_auto">
-                            <button class="btn_autoStop"></button>
-                        </div>
+                    <div class="btn d-flex align-items-center justify-content-between">
+                        <div class="button-prev"></div>
+                        <div class="button-stop"></div>
+                        <div class="button-next"></div>
                     </div>
                 </div>
             </div>
 
         </div>
-
     </section>
 
     <section id="map">
@@ -531,7 +566,15 @@
                 clickable: true,
             },
         });
-  </script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const fillElement = document.querySelector('.swiper-progress-bar .fill');
+            
+            // 예시: 페이지가 로드된 후 1초 뒤에 애니메이션 시작
+            setTimeout(function() {
+                fillElement.classList.add('active');
+            }, 1000);
+        });
     </script>
 </body>
 </html>
