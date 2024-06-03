@@ -276,26 +276,56 @@
 
             <div class="cont col-6 d-flex justify-content-end">
                 <div class="swiperContainer">
-                    <ul class="swiper-wrapper">
-                        <li class="swiper-slide">
-                            <div class="titWrap">
-                                <p>경주의 계절 축제</p>
-                                <strong>
-                                    경주의 계절</br>
-                                    봄날의 벚꽃 축제</strong>
-                                <a href="" class=".text-with-underline">자세히 보기</a>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <div class="titWrap">
-                                <p>&lt;꽃길한복&gt; 대여 이벤트</p>
-                                <strong>
-                                    아름다운 한복이 여행을</br>
-                                    꽃길로 만들어 줄거에요</strong>
-                                <a href="" class=".text-with-underline">자세히 보기</a>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <p class="mb-4">경주의 계절 축제</p>
+                            <strong>
+                                경주의 계절</br>
+                                봄날의 벚꽃 축제
+                            </strong>
+                            <a href="" class="text-with-underline d-block mt-3">자세히 보기</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <p class="mb-4">&lt;꽃길한복&gt; 대여 이벤트</p>
+                            <strong>
+                                아름다운 한복이 여행을</br>
+                                꽃길로 만들어 줄거에요
+                            </strong>
+                            <a href="" class="text-with-underline d-block mt-3">자세히 보기</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <p class="mb-4">여행 명소 투어</p>
+                            <strong>
+                                뚜벅뚜벅, 경주의<br>
+                                역사를 따라 걷는 시간
+                            </strong>
+                            <a href="" class="text-with-underline d-block mt-3">자세히보기</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <p class="mb-4">올 여름 어느때보다 시원하게!</p>
+                            <strong>
+                                무더운 여름, 경주<br>
+                                시원한 카페 TOP 3
+                            </strong>
+                            <a href="" class="text-with-underline d-block mt-3">자세히보기</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <p class="mb-4">우리들의 추억 여행</p>
+                            <strong>
+                                다시 오지 못 할 지금,<br>
+                                이 순간을 기록하세요
+                            </strong>
+                            <a href="" class="text-with-underline d-block mt-3">자세히보기</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <p class="mb-4">행복의 경주월드</p>
+                            <strong>
+                                스트레스 해소<br>
+                                최강 스릴 도전!
+                            </strong>
+                            <a href="" class="text-with-underline d-block mt-3">자세히보기</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -671,7 +701,7 @@
         //     document.body.classList = "";
         // })
 
-        const swiper_mainBanner_ = new Swiper("#mainBanner .swiper", {
+        const swiper_mainBanner1 = new Swiper("#mainBanner .swiper", {
             loop: true,
             autoplay: {
                 delay: 5000,
@@ -679,12 +709,34 @@
             },
             slidesPerView: "auto",
             spaceBetween: 27,
-            // centeredSlides: true, // 현재 슬라이드를 가운데로 설정
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
             },
+            controller: {
+                control: null,
+            }
         });
+
+        const swiper_mainBanner2 = new Swiper("#mainBanner .swiperContainer", {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            slidesPerView: "auto",
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            controller: {
+                control: null,
+            },
+        });
+
+        swiper_mainBanner1.controller.control = swiper_mainBanner2;
+        swiper_mainBanner2.controller.control = swiper_mainBanner1;
+
 
     </script>
 </body>

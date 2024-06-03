@@ -232,37 +232,57 @@
         margin-top: 264px;
 
         .cont{
-            .titWrap{
-                
-                p {
-                    font-size: 18px;
-                    font-weight: 300;
-                    color: white;
-                    background: #000;
-                    border-radius: 30px;
-                    width: 155px;
-                    height: 41px;
-                    display: flex; 
-                    justify-content: center;    
-                    align-items: center;  
-                }
-                strong {
-                    font-size: 36px;
-                    font-weight: 500;
-                    line-height: 46px;
-                    letter-spacing: -6%;
-                }
-                .text-with-underline {
-                    // text-decoration: underline;
-                    font-size: 18px;
-                    margin-bottom: 1px; /* 텍스트와 밑줄 사이의 공간 조정 */
-                    &::after {
-                        content: "";
-                        display: block;
-                        height: 1px; 
-                        background-color: #333; 
-                        margin-top: 1px; 
-                        width: 4.8rem;
+            .swiperContainer{
+                // margin-top: 396px;
+                // margin-left: 260px;
+                width: calc(40% + 150px);
+                .swiper-slide{
+                    padding-top: 132px;
+                    &:active {
+                        
+                    }
+                    p {
+                        font-size: 18px;
+                        font-weight: 400;
+                        color: white;
+                        margin-left: 20px;
+                        // display: flex; 
+                        // justify-content: center;    
+                        // align-items: center;  
+                        position: relative;
+                        display: inline-block;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: calc(100% + 40px); // 글자 길이보다 양옆으로 20px씩 여백을 가집니다
+                            height: calc(100% + 14px); // 글자 높이보다 위아래로 7px씩 여백을 가집니다
+                            background-color: black;
+                            border-radius: 20px;
+                            z-index: -1; // 글자 뒤에 배경 도형이 위치하도록 합니다
+                        }
+                    }
+                    strong {
+                        display: flex;
+                        font-size: 36px;
+                        font-weight: 500;
+                        line-height: 46px;
+                        letter-spacing: -6%;
+                    }
+                    .text-with-underline {
+                        // text-decoration: underline;
+                        font-size: 18px;
+                        margin-bottom: 1px; /* 텍스트와 밑줄 사이의 공간 조정 */
+                        &::after {
+                            content: "";
+                            display: block;
+                            height: 1px; 
+                            background-color: #333; 
+                            margin-top: 1px; 
+                            width: 4.8rem;
+                        }
                     }
                 }
             }

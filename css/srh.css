@@ -62,29 +62,44 @@
   justify-content: center;
   margin-top: 264px;
 }
-#mainBanner .mainShowcase .cont .titWrap p {
-  font-size: 18px;
-  font-weight: 300;
-  color: white;
-  background: #000;
-  border-radius: 30px;
-  width: 155px;
-  height: 41px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#mainBanner .mainShowcase .cont .swiperContainer {
+  width: calc(40% + 150px);
 }
-#mainBanner .mainShowcase .cont .titWrap strong {
+#mainBanner .mainShowcase .cont .swiperContainer .swiper-slide {
+  padding-top: 132px;
+}
+#mainBanner .mainShowcase .cont .swiperContainer .swiper-slide p {
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  margin-left: 20px;
+  position: relative;
+  display: inline-block;
+}
+#mainBanner .mainShowcase .cont .swiperContainer .swiper-slide p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 40px);
+  height: calc(100% + 14px);
+  background-color: black;
+  border-radius: 20px;
+  z-index: -1;
+}
+#mainBanner .mainShowcase .cont .swiperContainer .swiper-slide strong {
+  display: flex;
   font-size: 36px;
   font-weight: 500;
   line-height: 46px;
   letter-spacing: -6%;
 }
-#mainBanner .mainShowcase .cont .titWrap .text-with-underline {
+#mainBanner .mainShowcase .cont .swiperContainer .swiper-slide .text-with-underline {
   font-size: 18px;
   margin-bottom: 1px; /* 텍스트와 밑줄 사이의 공간 조정 */
 }
-#mainBanner .mainShowcase .cont .titWrap .text-with-underline::after {
+#mainBanner .mainShowcase .cont .swiperContainer .swiper-slide .text-with-underline::after {
   content: "";
   display: block;
   height: 1px;
