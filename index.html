@@ -47,6 +47,7 @@
     <!-- css  -->
     <link rel="stylesheet" href="/css/common.min.css">
     <link rel="stylesheet" href="/css/srh.min.css">
+    <script src = "./navi.js" defer></script>
 
     <style>
         /* .popupshow::before{
@@ -84,9 +85,8 @@
     <header id="hd">
         <div class="container-1824 d-flex justify-content-between align-items-center fixed-top">
             <h1 class="mb-0"><a href=""><img src="./img/hdLogo.svg" alt=""></a></h1> <!-- 로고는 이미지로 -->
-            <!-- ul#gnb>li*4>a{대메뉴$} -->
-            <ul class="gnb ps-0 mb-0 d-flex">
-                <li class="gnb_li px-5 position-relative">
+            <ul id ="gnb" class="ps-0 mb-0 d-flex">
+                <!-- <li class="gnb_li px-5 position-relative">
                     <a href="">경주 소개</a>
                     <ul class="gnb_ul position-absolute ps-0">
                         <li><a href="">역사 및 소개</a></li>
@@ -117,16 +117,15 @@
                     <ul class="gnb_ul position-absolute ps-0">
                         <li><a href="" >진행중인 이벤트</a></li>
                     </ul>
-                </li>
-            </ul>
-            <!-- ul.iconMenu>li*2>i>img^span -->
-            <ul class="iconMenu ps-0 mb-0 d-flex justify-content-end">
-                <li class="ms-4"><i><img src="./img/hdSearch.svg" alt=""></i>
+                </li> -->
+            </ul> 
+            <ul id="iconMenu " class="ps-0 mb-0 d-flex justify-content-end">
+                <li class="ms-4"><a href=""><img src="./img/hdSearch.svg" alt=""></a>
                     <span class="visually-hidden">검색</span>
                 </li>
-                <li class="ms-4"><i><img src="./img/hdLogin.svg" alt=""></i>
+                <li class="ms-4"><a href=""><img src="./img/hdLogin.svg" alt=""></a>
                     <span class="visually-hidden">로그인</span>
-                </li>
+                </li> 
             </ul>
         </div>
     </header>
@@ -675,7 +674,7 @@
         const swiper_mainBanner_ = new Swiper("#mainBanner .swiper", {
             loop: true,
             autoplay: {
-                delay: 6000,
+                delay: 5000,
                 disableOnInteraction: false,
             },
             slidesPerView: "auto",

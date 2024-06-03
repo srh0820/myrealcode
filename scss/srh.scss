@@ -1,7 +1,7 @@
 #hd {
     position: relative;
     // height: 100px;
-    .gnb{
+    #gnb{
          &:hover{
             &:before{
                 height: calc( 10rem + 20px );
@@ -65,7 +65,7 @@
                     }
                 }
             }
-        }     
+        } 
     }    
 }
 
