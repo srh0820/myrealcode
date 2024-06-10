@@ -271,8 +271,8 @@
       
     <!-- </section> --> 
 
-    <section id="mainBanner">
-        <div class="mainShowcase" id="mainTab">
+    <section id="mainBanner" class="background-color">
+        <div id="mainTab" class="mainShowcase" >
 
             <div class="cont col-6 d-flex justify-content-end">
                 <div class="swiperContainer">
@@ -694,49 +694,66 @@
         
         </div>
     </footer>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        
         // document.querySelector("#popupform > button").addEventListener('click', function(){
         //     document.body.classList = "";
         // })
+  
+        $(function(){
+            const bgcolors = ["#F9D6D6", "#85BD91", "#D1CFFF", "#CDE6F9", "#FFEBB7", "#A1D4EF"];
 
-        const swiper_mainBanner1 = new Swiper("#mainBanner .swiper", {
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            slidesPerView: "auto",
-            spaceBetween: 27,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            controller: {
-                control: null,
+            function changeBackgroundColor(swiper) {
+                const index = swiper.realIndex % bgcolors.length;
+                $("#mainBanner").css("background", bgcolors[index]);
             }
+
+            const swiper_mainBanner1 = new Swiper("#mainBanner .swiper", {
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                slidesPerView: "auto",
+                spaceBetween: 27,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                on: {
+                    slideChange: function(swiper) {
+                        changeBackgroundColor(swiper);
+                    },
+                    init: function(swiper) {
+                        changeBackgroundColor(swiper);
+                    }
+                }
+            });
+
+            const swiper_mainBanner2 = new Swiper("#mainBanner .swiperContainer", {
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                slidesPerView: "auto",
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                on: {
+                    slideChange: function(swiper) {
+                        changeBackgroundColor(swiper);
+                    },
+                    init: function(swiper) {
+                        changeBackgroundColor(swiper);
+                    }
+                }
+            });
+
+            swiper_mainBanner1.controller.control = swiper_mainBanner2;
+            swiper_mainBanner2.controller.control = swiper_mainBanner1;
         });
-
-        const swiper_mainBanner2 = new Swiper("#mainBanner .swiperContainer", {
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            slidesPerView: "auto",
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            controller: {
-                control: null,
-            },
-        });
-
-        swiper_mainBanner1.controller.control = swiper_mainBanner2;
-        swiper_mainBanner2.controller.control = swiper_mainBanner1;
-
 
     </script>
 </body>

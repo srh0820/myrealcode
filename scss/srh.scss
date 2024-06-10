@@ -226,6 +226,18 @@
 #mainBanner{
     width: 100%;
     overflow: hidden;
+    position: relative;
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: #c9bbbb;
+        // border-bottom: 1px solid #000;
+        width: 100%;
+        height: 44px;
+        left: 0;
+        bottom: 0;
+    }
     .mainShowcase{
         display: flex;
         justify-content: center;
