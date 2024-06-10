@@ -244,6 +244,7 @@
         margin-top: 264px;
 
         .cont{
+            overflow: hidden;
             .swiperContainer{
                 // margin-top: 396px;
                 // margin-left: 260px;
@@ -303,9 +304,8 @@
         .img_wrap{
             height: 580px;
             width: calc(60% + 258px);
-            
             overflow: hidden;
-            
+            border-radius: 10px;
             .swiper {
               
             }

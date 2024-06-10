@@ -73,6 +73,9 @@
   justify-content: center;
   margin-top: 264px;
 }
+#mainBanner .mainShowcase .cont {
+  overflow: hidden;
+}
 #mainBanner .mainShowcase .cont .swiperContainer {
   width: calc(40% + 150px);
 }
@@ -122,6 +125,7 @@
   height: 580px;
   width: calc(60% + 258px);
   overflow: hidden;
+  border-radius: 10px;
 }
 #mainBanner .mainShowcase .img_wrap .swiper-slide {
   text-align: center;
