@@ -53,67 +53,46 @@
   text-decoration: underline;
 }
 
-#mainBanner {
-  width: 100%;
-  overflow: hidden;
+#mainslider {
+  height: 800px;
   position: relative;
+  transition: 0.5s;
 }
-#mainBanner::after {
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: #c9bbbb;
-  width: 100%;
-  height: 44px;
-  left: 0;
-  bottom: 0;
+#mainslider .mainwrapper {
+  position: relative;
+  margin-left: -750px;
+  overflow-x: hidden;
 }
-#mainBanner .mainShowcase {
+#mainslider .mainwrapper .mainTextbox {
+  max-width: 700px;
+  margin-top: 396px;
+  min-width: 420px;
+  width: 20vw;
+}
+#mainslider .mainwrapper .mainTextbox .mainSlidetext p {
+  font-size: 18px;
+  font-weight: 300;
+  color: white;
+  background: #000;
+  border-radius: 30px;
+  width: 155px;
+  height: 41px;
   display: flex;
   justify-content: center;
-  margin-top: 264px;
+  align-items: center;
 }
-#mainBanner .mainShowcase .cont {
-  overflow: hidden;
-}
-#mainBanner .mainShowcase .cont .swiperContainer {
-  width: calc(40% + 150px);
-}
-#mainBanner .mainShowcase .cont .swiperContainer .swiper-slide {
-  padding-top: 132px;
-}
-#mainBanner .mainShowcase .cont .swiperContainer .swiper-slide p {
-  font-size: 18px;
-  font-weight: 400;
-  color: white;
-  margin-left: 20px;
-  position: relative;
-  display: inline-block;
-}
-#mainBanner .mainShowcase .cont .swiperContainer .swiper-slide p::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(100% + 40px);
-  height: calc(100% + 14px);
-  background-color: black;
-  border-radius: 20px;
-  z-index: -1;
-}
-#mainBanner .mainShowcase .cont .swiperContainer .swiper-slide strong {
-  display: flex;
+#mainslider .mainwrapper .mainTextbox .mainSlidetext strong {
   font-size: 36px;
   font-weight: 500;
   line-height: 46px;
   letter-spacing: -6%;
 }
-#mainBanner .mainShowcase .cont .swiperContainer .swiper-slide .text-with-underline {
+#mainslider .mainwrapper .mainTextbox .mainSlidetext .text-with-underline {
+  text-decoration: none;
   font-size: 18px;
   margin-bottom: 1px; /* 텍스트와 밑줄 사이의 공간 조정 */
 }
-#mainBanner .mainShowcase .cont .swiperContainer .swiper-slide .text-with-underline::after {
+#mainslider .mainwrapper .mainTextbox .mainSlidetext .text-with-underline::after {
   content: "";
   display: block;
   height: 1px;
@@ -121,29 +100,87 @@
   margin-top: 1px;
   width: 4.8rem;
 }
-#mainBanner .mainShowcase .img_wrap {
-  height: 580px;
-  width: calc(60% + 258px);
+#mainslider .mainwrapper .mainPagebox .swiper-progress-bar {
+  bottom: 17px;
+  right: 60%;
+  height: 2px;
+  background: #ccc;
   overflow: hidden;
-  border-radius: 10px;
+  position: absolute;
+  width: 170px;
 }
-#mainBanner .mainShowcase .img_wrap .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
+#mainslider .mainwrapper .mainPagebox .swiper-progress-bar .slide_progress-bar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#mainslider .mainwrapper .mainPagebox .swiper-progress-bar .slide_progress-bar .fill {
+  background: #000;
+  height: 100%;
+  width: 0%; /* 초기 너비 설정 */
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: width 5s linear;
+}
+#mainslider .mainwrapper .mainPagebox .numberui {
+  margin-left: 200px;
   align-items: center;
-  width: auto;
-  height: 580px;
-  overflow: hidden;
-  border-radius: 10px;
+  font-size: 15px;
+  letter-spacing: 0 !important;
 }
-#mainBanner .mainShowcase .img_wrap .swiper-slide img {
-  display: block;
+#mainslider .mainwrapper .mainPagebox .numberui .swiper-pagination-current {
+  color: #000;
+}
+#mainslider .mainwrapper .mainPagebox .numberui .swiper-pagination-total {
+  color: #666;
+}
+#mainslider .mainwrapper .mainPagebox .btn {
+  position: absolute;
+  bottom: 7px;
+  right: 20%;
+  width: 60px;
+  padding: 0 3px;
+  border: 0;
+  z-index: 100000;
+}
+#mainslider .mainwrapper .mainPagebox .btn .button-prev {
+  margin: 0;
+  border: 0;
+  width: 10px;
+  height: 11px;
+  background: url("../img/mainLeft.svg") no-repeat;
+  background-size: 10px;
+}
+#mainslider .mainwrapper .mainPagebox .btn .button_autoControl {
+  overflow: hidden;
+  display: inline-block;
+  padding: 0;
+  width: 10px;
+  height: 11px;
+  border: none;
+  background: url("../img/mainStop.svg") no-repeat;
+}
+#mainslider .mainwrapper .mainPagebox .btn .button_autoControl.play {
+  background: url("../img/mainPlay.svg") no-repeat;
+}
+#mainslider .mainwrapper .mainPagebox .btn .button-next {
+  margin: 0;
+  border: 0;
+  width: 10px;
+  height: 11px;
+  background: url("../img/mainRight.svg") no-repeat;
+}
+#mainslider .mainImgbox {
+  margin-top: 264px;
+  height: 580px;
   z-index: 2;
   width: 1100px;
-  min-height: 580px;
+}
+#mainslider .mainImgbox .swiper-slide img {
+  border-radius: 10px;
+  width: 100%;
+  height: 580px;
   -o-object-fit: cover;
   object-fit: cover;
 }

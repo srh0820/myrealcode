@@ -223,117 +223,148 @@
 //     }
 // }
 
-#mainBanner{
-    width: 100%;
-    overflow: hidden;
+#mainslider {
+    height: 800px;
     position: relative;
-    &::after{
-        content: "";
-        display: block;
-        position: absolute;
-        background-color: #c9bbbb;
-        // border-bottom: 1px solid #000;
-        width: 100%;
-        height: 44px;
-        left: 0;
-        bottom: 0;
-    }
-    .mainShowcase{
-        display: flex;
-        justify-content: center;
-        margin-top: 264px;
-
-        .cont{
-            overflow: hidden;
-            .swiperContainer{
-                // margin-top: 396px;
-                // margin-left: 260px;
-                width: calc(40% + 150px);
-                .swiper-slide{
-                    padding-top: 132px;
-                    &:active {
-                        
-                    }
-                    p {
-                        font-size: 18px;
-                        font-weight: 400;
-                        color: white;
-                        margin-left: 20px;
-                        // display: flex; 
-                        // justify-content: center;    
-                        // align-items: center;  
-                        position: relative;
-                        display: inline-block;
-                        &::after {
-                            content: "";
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            width: calc(100% + 40px); // 글자 길이보다 양옆으로 20px씩 여백을 가집니다
-                            height: calc(100% + 14px); // 글자 높이보다 위아래로 7px씩 여백을 가집니다
-                            background-color: black;
-                            border-radius: 20px;
-                            z-index: -1; // 글자 뒤에 배경 도형이 위치하도록 합니다
-                        }
-                    }
-                    strong {
-                        display: flex;
-                        font-size: 36px;
-                        font-weight: 500;
-                        line-height: 46px;
-                        letter-spacing: -6%;
-                    }
-                    .text-with-underline {
-                        // text-decoration: underline;
-                        font-size: 18px;
-                        margin-bottom: 1px; /* 텍스트와 밑줄 사이의 공간 조정 */
-                        &::after {
-                            content: "";
-                            display: block;
-                            height: 1px; 
-                            background-color: #333; 
-                            margin-top: 1px; 
-                            width: 4.8rem;
-                        }
+    transition: 0.5s;   
+    .mainwrapper{
+        position: relative;
+        margin-left:-750px;
+        overflow-x: hidden;
+        .mainTextbox{
+            max-width: 700px;
+            margin-top: 396px;     
+            min-width: 420px;
+            width:20vw;            
+            .mainSlidetext{
+                p {
+                    font-size: 18px;
+                    font-weight: 300;
+                    color: white;
+                    background: #000;
+                    border-radius: 30px;
+                    width: 155px;
+                    height: 41px;
+                    display: flex; 
+                    justify-content: center;    
+                    align-items: center;  
+                }
+                strong {
+                    font-size: 36px;
+                    font-weight: 500;
+                    line-height: 46px;
+                    letter-spacing: -6%;
+                }
+                .text-with-underline {
+                    text-decoration: none;
+                    font-size: 18px;
+                    margin-bottom: 1px; /* 텍스트와 밑줄 사이의 공간 조정 */
+                    &::after {
+                        content: "";
+                        display: block;
+                        height: 1px; 
+                        background-color: #333; 
+                        margin-top: 1px; 
+                        width: 4.8rem;
                     }
                 }
             }
         }
-
-        .img_wrap{
-            height: 580px;
-            width: calc(60% + 258px);
-            overflow: hidden;
-            border-radius: 10px;
-            .swiper {
-              
+        .mainPagebox{      
+            .swiper-progress-bar {
+                bottom: 17px;
+                right: 60%;
+                height: 2px;
+                background: #ccc;
+                overflow: hidden;
+                position: absolute;
+                width: 170px;
+                .slide_progress-bar {
+                    position: relative;          
+                    width: 100%;
+                    height: 100%;
+                    .fill {
+                        background: #000;
+                        height: 100%;
+                        width: 0%; /* 초기 너비 설정 */
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        transition: width 5s linear; 
+                    }
+                }
             }
-        
-            .swiper-slide {
-                text-align: center;
-                font-size: 18px;
-                background: #fff;
-                display: flex;
-                justify-content: center;
+            .numberui{
+                margin-left: 200px;
                 align-items: center;
-                width: auto; // 슬라이드의 너비를 조정하여 다음 슬라이드가 살짝 보이게 설정
-                height: 580px;
-                overflow: hidden; // 슬라이드 내부에서 이미지가 넘치지 않도록 설정
-                border-radius: 10px;
+                font-size: 15px;
+                letter-spacing: 0 !important;
+                .swiper-pagination-current{
+                    color: #000;
+                }
+                .swiper-pagination-total{
+                    color: #666;
+                }
             }
-        
-            .swiper-slide img {
-                display: block;
-                z-index: 2;
-                width: 1100px;
-                min-height: 580px;
+            .btn{
+                position: absolute;
+                bottom: 7px;
+                right: 20%;
+                width: 60px;
+                padding: 0 3px;
+                border: 0;
+                z-index: 100000;
+                .button-prev{
+                    margin: 0;
+                    border: 0;
+                    width: 10px;
+                    height: 11px;
+                    background: url('../img/mainLeft.svg') no-repeat;
+                    background-size: 10px;
+                }               
+                .button_autoControl {
+                    overflow: hidden;
+                    display: inline-block;
+                    padding: 0;
+                    width: 10px;
+                    height: 11px;
+                    border: none; 
+                    background: url('../img/mainStop.svg') no-repeat; 
+                }                
+                .button_autoControl.play {
+                    background: url('../img/mainPlay.svg') no-repeat; 
+                }                      
+                .button-next{
+                    margin: 0;
+                    border: 0;
+                    width: 10px;
+                    height: 11px;
+                    background: url('../img/mainRight.svg') no-repeat;
+                }
+            }
+        }
+    }
+
+    .mainImgbox{
+        margin-top: 264px;      
+        height: 580px;
+        z-index: 2;
+        width: 1100px;
+        .swiper-slide{
+
+            img{
+                // margin-right: 27px;
+                border-radius: 10px;
+                width: 100%;
+                height: 580px;
                 -o-object-fit: cover;
                 object-fit: cover;
             }
-        } 
+        }
+        
     }
 }
+
 
 
 #event {
