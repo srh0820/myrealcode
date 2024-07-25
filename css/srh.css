@@ -54,9 +54,19 @@
 }
 
 #mainslider {
-  height: 800px;
   position: relative;
   transition: 0.5s;
+  overflow: hidden;
+}
+#mainslider::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 45px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: #fff;
 }
 #mainslider .mainwrapper {
   position: relative;
@@ -143,6 +153,7 @@
   padding: 0 3px;
   border: 0;
   z-index: 100000;
+  cursor: default;
 }
 #mainslider .mainwrapper .mainPagebox .btn .button-prev {
   margin: 0;
