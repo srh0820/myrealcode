@@ -147,7 +147,7 @@
 }
 #mainslider .mainwrapper .mainPagebox .btn {
   position: absolute;
-  bottom: 7px;
+  bottom: 13px;
   right: 20%;
   width: 60px;
   padding: 0 3px;
@@ -159,27 +159,34 @@
   margin: 0;
   border: 0;
   width: 10px;
-  height: 11px;
+  height: 12px;
   background: url("../img/mainLeft.svg") no-repeat;
   background-size: 10px;
 }
+#mainslider .mainwrapper .mainPagebox .btn .button-auto {
+  width: 10px;
+  height: 12px;
+}
 #mainslider .mainwrapper .mainPagebox .btn .button_autoControl {
   overflow: hidden;
-  display: inline-block;
   padding: 0;
-  width: 10px;
-  height: 11px;
+  width: 100%;
+  height: 100%;
   border: none;
   background: url("../img/mainStop.svg") no-repeat;
+  background-size: auto;
+  background-position: center;
 }
 #mainslider .mainwrapper .mainPagebox .btn .button_autoControl.play {
   background: url("../img/mainPlay.svg") no-repeat;
+  background-size: auto;
+  background-position: center;
 }
 #mainslider .mainwrapper .mainPagebox .btn .button-next {
   margin: 0;
   border: 0;
   width: 10px;
-  height: 11px;
+  height: 12px;
   background: url("../img/mainRight.svg") no-repeat;
 }
 #mainslider .mainImgbox {
